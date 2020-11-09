@@ -1,8 +1,8 @@
 <?php
 
-namespace Sfneal\PhpPackageBoilerplate;
+namespace Sfneal\Currency;
 
-class PhpPackageBoilerplate
+class Currency
 {
     // Build your next great package.
 }
