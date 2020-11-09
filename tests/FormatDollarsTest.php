@@ -20,7 +20,7 @@ class FormatDollarsTest extends TestCase
         $this->assertTrue($value == '20.21');
 
         // Doesn't contain dollar sign
-        $this->assertStringNotContainsString("$", $value);
+        $this->assertStringNotContainsString('$', $value);
     }
 
     /** @test */
@@ -36,6 +36,6 @@ class FormatDollarsTest extends TestCase
         $this->assertTrue($value == '$43.65');
 
         // Doesn't contain dollar sign
-        $this->assertStringContainsString("$", $value);
+        $this->assertStringContainsString('$', $value);
     }
 }

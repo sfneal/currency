@@ -25,6 +25,6 @@ class FormatDollars extends AbstractActionStatic
         $value = number_format($amount, $decimals, '.', $thousands_sep);
 
         // Optionally prefix the value with a dollar sign
-        return $dollar_sign_prefix ? "$".$value : $value;
+        return $dollar_sign_prefix ? '$'.$value : $value;
     }
 }
