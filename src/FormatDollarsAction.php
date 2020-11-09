@@ -4,7 +4,6 @@ namespace Sfneal\Currency;
 
 use Sfneal\Actions\AbstractActionStatic;
 
-// todo: add to package
 class FormatDollarsAction extends AbstractActionStatic
 {
     /**
