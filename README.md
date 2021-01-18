@@ -1,7 +1,8 @@
 # Currency
 
+[![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/currency)](https://packagist.org/packages/sfneal/currency)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/currency.svg?style=flat-square)](https://packagist.org/packages/sfneal/currency)
-[![Build Status](https://img.shields.io/travis/sfneal/currency/master.svg?style=flat-square)](https://travis-ci.org/sfneal/currency)
+[![Build Status](https://travis-ci.com/sfneal/currency.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/currency)
 [![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/currency.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/currency)
 [![Total Downloads](https://img.shields.io/packagist/dt/sfneal/currency.svg?style=flat-square)](https://packagist.org/packages/sfneal/currency)
 
