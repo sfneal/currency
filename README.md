@@ -20,7 +20,9 @@ composer require sfneal/currency
 ## Usage
 
 ``` php
-// Usage description here
+use Sfneal\Currency\FormatDollars;
+FormatDollars::execute(43.654284, 2, '', true);
+>>> $43.65
 ```
 
 ### Testing
