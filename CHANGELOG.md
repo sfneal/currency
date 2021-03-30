@@ -19,3 +19,8 @@ All notable changes to `currency` will be documented in this file
 ## 1.0.0 - 2021-01-21
 - initial production release
 - bump min sfneal/actions package version requirement
+
+
+## 1.0.1 - 2021-03-30
+- fix sfneal/actions version syntax
+- fix Travis CI config to enable code coverage uploads
