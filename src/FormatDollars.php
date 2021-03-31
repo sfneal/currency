@@ -2,9 +2,9 @@
 
 namespace Sfneal\Currency;
 
-use Sfneal\Actions\AbstractAction;
+use Sfneal\Actions\Action;
 
-class FormatDollars extends AbstractAction
+class FormatDollars extends Action
 {
     /**
      * @var float
