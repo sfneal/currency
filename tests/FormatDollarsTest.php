@@ -11,7 +11,7 @@ class FormatDollarsTest extends TestCase
     public function format_currency()
     {
         $amount = 20.2134;
-        $value = FormatDollars::execute($amount);
+        $value = (new FormatDollars($amount))->execute();
 
         // Type is correct
         $this->assertIsString($value);
@@ -27,7 +27,7 @@ class FormatDollarsTest extends TestCase
     public function format_currency_with_dollar_sign()
     {
         $amount = 43.654284;
-        $value = FormatDollars::execute($amount, 2, '', true);
+        $value = (new FormatDollars($amount, 2, '', true))->execute();
 
         // Type is correct
         $this->assertIsString($value);
