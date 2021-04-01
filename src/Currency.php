@@ -24,15 +24,13 @@ class Currency
      * Format a currency float value to a standard format.
      *
      * @param float $amount
-     * @param bool $prefix
-     * @param string $currency
-     * * @param bool $commaSeparated
+     * @param string|null $currency
+     * @param bool $commaSeparated
      * @param int $decimals
      * @return string
      */
     public static function format(float $amount,
-                                  bool $prefix = false,
-                                  string $currency = self::USD,
+                                  string $currency = null,
                                   bool $commaSeparated = false,
                                   int $decimals = 2): string
     {
@@ -45,7 +43,7 @@ class Currency
         );
 
         // Prepend currency symbol
-        if ($prefix) {
+        if ($currency) {
             return $currency . $value;
         }
 
