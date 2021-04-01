@@ -9,13 +9,13 @@ class Currency
     /**
      * Currency Symbols
      */
-    public const USD = "$";
-    public const EUR = "€";
-    public const GBP = "£";
-    public const INR = "₹";
-    public const JPY = "¥";
-    public const CNY = "¥";
-    public const THB = "฿";
+    public const USD = '$';
+    public const EUR = '€';
+    public const GBP = '£';
+    public const INR = '₹';
+    public const JPY = '¥';
+    public const CNY = '¥';
+    public const THB = '฿';
     public const AUD = self::USD;
     public const CAD = self::USD;
     public const NZD = self::USD;
