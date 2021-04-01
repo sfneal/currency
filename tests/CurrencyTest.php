@@ -2,7 +2,6 @@
 
 namespace Sfneal\Currency\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Sfneal\Currency\Currency;
 
 class CurrencyTest extends TestCase
@@ -14,14 +13,7 @@ class CurrencyTest extends TestCase
         $amount = 20.2134;
         $value = Currency::format($amount);
 
-        // Type is correct
-        $this->assertIsString($value);
-
-        // Value is correct
-        $this->assertEquals($expected, $value);
-
-        // Doesn't contain dollar sign
-        $this->assertStringNotContainsString('$', $value);
+        $this->currencyAssertions($expected, $value);
     }
 
     /** @test */
@@ -29,16 +21,10 @@ class CurrencyTest extends TestCase
     {
         $expected = '$43.65';
         $amount = 43.654284;
-        $value = Currency::format($amount, Currency::USD);
+        $currency = Currency::USD;
+        $value = Currency::format($amount, $currency);
 
-        // Type is correct
-        $this->assertIsString($value);
-
-        // Value is correct
-        $this->assertEquals($expected, $value);
-
-        // Doesn't contain dollar sign
-        $this->assertStringContainsString('$', $value);
+        $this->currencyAssertions($expected, $value, $currency);
     }
 
     /** @test */
@@ -46,15 +32,9 @@ class CurrencyTest extends TestCase
     {
         $expected = '$2,342.79';
         $amount = 2342.79354618;
-        $value = Currency::format($amount, Currency::USD, true);
+        $currency = Currency::USD;
+        $value = Currency::format($amount, $currency, true);
 
-        // Type is correct
-        $this->assertIsString($value);
-
-        // Value is correct
-        $this->assertEquals($expected, $value);
-
-        // Doesn't contain dollar sign
-        $this->assertStringContainsString('$', $value);
+        $this->currencyAssertions($expected, $value, $currency);
     }
 }
