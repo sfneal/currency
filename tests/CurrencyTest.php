@@ -29,12 +29,12 @@ class CurrencyTest extends TestCase
     {
         $expected = '$43.65';
         $amount = 43.654284;
-        $value = Currency::format($amount, Currency::USD, false);
+        $value = Currency::format($amount, Currency::USD);
 
         // Type is correct
         $this->assertIsString($value);
 
-        // Value is correct;
+        // Value is correct
         $this->assertEquals($expected, $value);
 
         // Doesn't contain dollar sign
@@ -51,7 +51,7 @@ class CurrencyTest extends TestCase
         // Type is correct
         $this->assertIsString($value);
 
-        // Value is correct;
+        // Value is correct
         $this->assertEquals($expected, $value);
 
         // Doesn't contain dollar sign
