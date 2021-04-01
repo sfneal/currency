@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Sfneal\Currency;
-
 
 class Currency
 {
     /**
-     * Currency Symbols
+     * Currency Symbols.
      */
     public const USD = '$';
     public const EUR = '€';
@@ -44,7 +42,7 @@ class Currency
 
         // Prepend currency symbol
         if ($currency) {
-            return $currency . $value;
+            return $currency.$value;
         }
 
         // Value without currency symbol
