@@ -29,7 +29,24 @@ class CurrencyTest extends TestCase
     {
         $expected = '$43.65';
         $amount = 43.654284;
-        $value = Currency::format($amount, true, Currency::USD, 2, false);
+        $value = Currency::format($amount, true, Currency::USD, false);
+
+        // Type is correct
+        $this->assertIsString($value);
+
+        // Value is correct;
+        $this->assertEquals($expected, $value);
+
+        // Doesn't contain dollar sign
+        $this->assertStringContainsString('$', $value);
+    }
+
+    /** @test */
+    public function dollars_with_symbol_comma_separated()
+    {
+        $expected = '$2,342.79';
+        $amount = 2342.79354618;
+        $value = Currency::format($amount, true, Currency::USD, true);
 
         // Type is correct
         $this->assertIsString($value);

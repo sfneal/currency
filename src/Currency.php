@@ -26,15 +26,15 @@ class Currency
      * @param float $amount
      * @param bool $prefix
      * @param string $currency
+     * * @param bool $commaSeparated
      * @param int $decimals
-     * @param bool $commaSeparated
      * @return string
      */
     public static function format(float $amount,
                                   bool $prefix = false,
                                   string $currency = self::USD,
-                                  int $decimals = 2,
-                                  bool $commaSeparated = false): string
+                                  bool $commaSeparated = false,
+                                  int $decimals = 2): string
     {
         // Format the current amount
         $value = number_format(
