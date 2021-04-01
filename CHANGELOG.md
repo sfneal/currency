@@ -29,3 +29,9 @@ All notable changes to `currency` will be documented in this file
 ## 1.1.0 - 2021-03-31
 - bump sfneal/actions min version to 2.0
 - refactor `FormatDollars` to extend `Action` instead of `ActionStatic`
+
+
+## 2.0.0 - 2021-04-01
+- make `Currency` class with static `format()` method to improve syntax
+- cut `FormatDollars` actions class
+- cut sfneal/actions from composer requirements
