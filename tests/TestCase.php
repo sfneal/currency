@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sfneal\Currency\Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
