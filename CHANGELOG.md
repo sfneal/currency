@@ -37,5 +37,5 @@ All notable changes to `currency` will be documented in this file
 - cut sfneal/actions from composer requirements
  
  
-## 2.0.0 - 2021-08-31
+## 2.0.1 - 2021-08-31
 - add support for php7.1
