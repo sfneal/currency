@@ -22,13 +22,21 @@ php:
     - 7.1
 
 before_script:
+    # Increase memory limit & disable xdebug
     - echo "memory_limit=4096M" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
     - phpenv config-rm xdebug.ini
-    - travis_retry composer self-update
-    - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction
+
+    # Authenticate Docker Hub
+    - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+
+    # Update Composer to latest version & install dependencies
+    - composer self-update
+    - composer update ${COMPOSER_FLAGS} --no-interaction
 
 script:
     - composer test
+    - bash scripts/boot.sh ${COMPOSER_FLAGS}
 
 after_script:
     - composer upload-coverage
+    - docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}} {{.Size}}'
