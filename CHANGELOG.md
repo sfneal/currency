@@ -39,3 +39,4 @@ All notable changes to `currency` will be documented in this file
  
 ## 2.0.1 - 2021-08-31
 - add support for php7.1
+- fix min phpunit/phpunit version to support php7.1 & use of `assertIsString()` method
